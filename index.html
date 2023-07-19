@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-indigo.min.css" />
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script type="module" src="./dist/vi.js"></script>
     </head>
     <body>
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -227,7 +228,10 @@
                         </div>
                         <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
                         <div class="mdl-cell mdl-cell--12-col">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="calculate">計算</button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="calculate" onclick="calculate()">計算</button>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <div id="out"></div>
                         </div>
                     </div>
                 </div>

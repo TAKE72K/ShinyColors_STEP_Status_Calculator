@@ -1,16 +1,23 @@
-const GLPK = require('./glpk.js');
-const glpk = GLPK();
-const options = {
-    msglev: glpk.GLP_MSG_ALL,
-    presol: true,
-    cb: {
-        call: progress => console.log(progress),
-        each: 1
-    }
+import GLPK from './index.js';
+
+
+
+
+const glpk = await GLPK();
+
+
+
+function print(res) {
+    const el = window.document.getElementById('out');
+    el.innerHTML = JSON.stringify(res, null, 2);
 };
+function show(res){
+    console.log(res);
+    const el = window.document.getElementById('out');
+    el.innerHTML = JSON.stringify(res, null, 2);
+}
 
-
-const res = glpk.solve({
+const lp = {
     name: 'LP',
     objective: {
         direction: glpk.GLP_MAX,
@@ -1315,6 +1322,35 @@ const res = glpk.solve({
         'vilup_te',
         'sp_cost',
     ],
+};
+const opt = {
+                msglev: glpk.GLP_MSG_OFF,
+                cb: {
+                    call: res => print(res),
+                    each: 1
+                }
+            };
+
+    // glpk.solve(lp, opt)
+    //                 .then(res => print(res))
+    //                 .catch(err => console.log(err));
 
 
-}, options);
+
+
+
+
+
+document.getElementById("calculate").onclick = function() {
+    calculate();
+};
+
+function calculate() {
+
+    lp.bounds[4].ub=document.getElementById("vi_pt_origin").value;
+    lp.bounds[4].lb=document.getElementById("vi_pt_origin").value;
+    // const glpk = await GLPK();
+    glpk.solve(lp, glpk.GLP_MSG_OFF).then(res=>show(res));
+    
+};
+// const res = glpk.solve(milp_model, options);
