@@ -1,39 +1,10 @@
-# Optimize Visual Status in S.T.E.P. Scenario based on Mixed-Integer Linear Programming
-We want to find out a most efficient way to use STEP status point. Since the point cost increasing by a linear manner and the point must be interger, we can refer this task as an integer linear programming problem.
+# S.T.E.P.ステ振り計算機
 
-We will first model our objective function, in this article we will take vi as an example, since the author mainly use VI arusuto.
+## 使用方法
 
-## Problem Formulation
+學完該學的アビリティ之後，輸入特化點數及養成卡的上限panel狀況，按頁面底部計算。
+計算機會給予特化最大值與需要的成長回數。
 
-**Status is everything!**
-We want to maximize Vi status, $\max{Vi}$, without any constraint violation.
+## 計算方法
 
-
-## Constraint
-
-### Vi_up_constraint
-
-In SEICHYOU panel, you can click Vi up buttom for at most 230 times, and the cost varies in different range. To optimize $Vi$, we need to model Vi_up_costraint as a piecewize linear cost.
-
-$ViPtCost(ViUp) = \left\{
-\begin{array}{l}
-   10*ViUp, 0\leq ViUp \leq 30 \\
-   300+15*(ViUp-30), 30\leq ViUp \leq 60 \\
-   750+15*(ViUp-60), 60\leq ViUp \leq 90 \\
-   1350+15*(ViUp-90), 90\leq ViUp \leq 120 \\
-   2250+15*(ViUp-120), 120\leq ViUp \leq 150 \\
-   3450+15*(ViUp-150), 150\leq ViUp \leq 230 
-\end{array}
-\right.$
-
-$TeamworkPtCost(ViUp) = \left\{
-\begin{array}{l}
-   0, 0\leq ViUp \leq 30 \\
-   0, 30\leq ViUp \leq 60 \\
-   1*(ViUp-60), 60\leq ViUp \leq 90 \\
-   30+2*(ViUp-90), 90\leq ViUp \leq 120 \\
-   90+3*(ViUp-120), 120\leq ViUp \leq 150 \\
-   180+4*(ViUp-150), 150\leq ViUp \leq 230 
-\end{array}
-\right.$
-
+TL:DR.
