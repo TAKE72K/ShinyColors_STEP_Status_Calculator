@@ -29,13 +29,18 @@
                     <div class="mdl-grid">
                        <div class="mdl-cell mdl-cell--12-col">
                            <h1>S.T.E.P.ステ振り計算機</h1>
-                                <h2>使用方法</h2>
+                                <h3>使用方法</h3>
                                 <div>學完該學的アビリティ之後，輸入特化點數及養成卡的上限panel狀況，按頁面底部計算。</div>
                                 <div>計算機會算出特化最大值與需要的成長回數。</div>
+                                <h3>計算方法</h3>
+                                <details>
+                                    <summary>TLDR</summary>
+                                    <div>最大化能力，也就是一個最佳化問題。可以將這個問題歸納為ILP，使用線性求解器來求出最大值。</div>
+                                    <div>求解器為包裝成 JS 版本的 GNU Linear Programming Kit(GLPK)。</div>
+                                </details>
                        </div>
                     </div>
                 </div>
-            </main>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
                 <div class="mdl-logo">恋の岬に鐘が鳴る</div>
@@ -45,6 +50,8 @@
 
                 </div>
             </footer>
+            </main>
+            
         </div>
     </body>
 </html>
