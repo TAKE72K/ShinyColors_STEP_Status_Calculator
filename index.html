@@ -2,321 +2,326 @@
 <html>
     <head>
         <title></title>
-        <meta content="">
+        <meta content="" />
         <style></style>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-indigo.min.css" />
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
         <script type="module" src="./dist/simple.js"></script>
     </head>
     <body>
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header">
+        <div class="mdl-layout mdl-js-layout">
+            <header class="mdl-layout__header mdl-layout__header--scroll">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
                     <span class="mdl-layout-title">STEP Calculator</span>
-                    <!-- Add spacer, to align navigation to the right -->
-                    <div class="mdl-layout-spacer"></div>
-                    <!-- Navigation. We hide it in small screens. -->
-                    <nav class="mdl-navigation mdl-layout--large-screen-only">
-                        <a class="mdl-navigation__link" href="./">Nothing Here</a>
-                    </nav>
+
                 </div>
             </header>
             <main class="mdl-layout__content">
-                <div class="page-content">
+                <div class="page-content  mdl-shadow--2dp">
                     <!-- Your content goes here -->
                     <div class="mdl-grid">
-                        <div class="mdl-shadow--2dp">
-                            <!-- Numeric Textfield with Floating Label -->
-                            <div class="mdl-cell mdl-cell--12-col">
-                                <div>
-                                    <span class="mdl-chip">
-                                        <span class="mdl-chip__text">輸入STEP點數</span>
-                                    </span>
+                       
+                        <!-- Numeric Textfield with Floating Label -->
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <div>
+                                <span class="mdl-chip">
+                                    <span class="mdl-chip__text">輸入STEP點數</span>
+                                </span>
+                            </div>
+                            <form action="#">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="vi_pt_origin" />
+                                    <label class="mdl-textfield__label" for="vi_pt_origin">特化pt</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
                                 </div>
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="vi_pt_origin">
-                                        <label class="mdl-textfield__label" for="vi_pt_origin">特化pt</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="me_pt_origin">
-                                        <label class="mdl-textfield__label" for="me_pt_origin">集中力pt</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="te_pt_origin">
-                                        <label class="mdl-textfield__label" for="te_pt_origin">団結力pt</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                </form>
-                                <div>
-                                    <span class="mdl-chip">
-                                        <span class="mdl-chip__text">輸入當前數值</span>
-                                    </span>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="me_pt_origin" />
+                                    <label class="mdl-textfield__label" for="me_pt_origin">集中力pt</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
                                 </div>
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]{2,5}" id="vi_origin" value=10>
-                                        <label class="mdl-textfield__label" for="vi_origin">特化ステ</label>
-                                        <span class="mdl-textfield__error">Number, at least 10.</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]{3,5}" id="vi_limit_origin" value=500>
-                                        <label class="mdl-textfield__label" for="vi_limit_origin">特化上限</label>
-                                        <span class="mdl-textfield__error">Number, at least 500.</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,100}" id="sp_origin">
-                                        <label class="mdl-textfield__label" for="sp_origin">SP</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,3}" id="vi_up_origin">
-                                        <label class="mdl-textfield__label" for="vi_up_origin">特化成長回數</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,3}" id="vi_l_origin">
-                                        <label class="mdl-textfield__label" for="vi_l_origin">上限成長回數</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="mdl-cell mdl-cell--12-col">
-                                <div>
-                                    <span class="mdl-chip">
-                                        <span class="mdl-chip__text">Ability繼承狀況</span>
-                                    </span>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,4}" id="te_pt_origin" />
+                                    <label class="mdl-textfield__label" for="te_pt_origin">団結力pt</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
                                 </div>
-                                <div>※ 若已習得，則不用選取。</div>
+                            </form>
+                            <div>
+                                <span class="mdl-chip">
+                                    <span class="mdl-chip__text">輸入當前數值</span>
+                                </span>
                             </div>
-                            <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
-                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="vi_p">
-                                    <input type="checkbox" id="vi_p" class="mdl-checkbox__input">
-                                    <span class="mdl-checkbox__label">上限+</span>
-                                </label>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
-                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="vi_pp">
-                                    <input type="checkbox" id="vi_pp" class="mdl-checkbox__input">
-                                    <span class="mdl-checkbox__label">上限++</span>
-                                </label>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
-                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="vi_ppp">
-                                    <input type="checkbox" id="vi_ppp" class="mdl-checkbox__input">
-                                    <span class="mdl-checkbox__label">上限+++</span>
-                                </label>
-                            </div>
-                            <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
-                            <div class="mdl-cell mdl-cell--12-col">
-                                <div>
-                                    <span class="mdl-chip">
-                                        <span class="mdl-chip__text">技能狀況</span>
-                                    </span>
+                            <form action="#">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]{2,5}" id="vi_origin" value="10" />
+                                    <label class="mdl-textfield__label" for="vi_origin">特化ステ</label>
+                                    <span class="mdl-textfield__error">Number, at least 10.</span>
                                 </div>
-                                <div>※ 填入可增加上限與所需SP。</div>
-                            </div>
-                            <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
-                                <span>P card</span>
-                                <form>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="p_l">
-                                        <label class="mdl-textfield__label" for="p_l">上限</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="p_sp">
-                                        <label class="mdl-textfield__label" for="p_sp">消費SP</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
-                                <span>SSR card 1</span>
-                                <form>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s0_l">
-                                        <label class="mdl-textfield__label" for="s0_l">上限</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s0_sp">
-                                        <label class="mdl-textfield__label" for="s0_sp">消費SP</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
-                                <span>SSR card 2</span>
-                                <form>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s1_l">
-                                        <label class="mdl-textfield__label" for="s1_l">上限</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s1_sp">
-                                        <label class="mdl-textfield__label" for="s1_sp">消費SP</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
-                                <span>SSR card 3</span>
-                                <form>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s2_l">
-                                        <label class="mdl-textfield__label" for="s2_l">上限</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s2_sp">
-                                        <label class="mdl-textfield__label" for="s2_sp">消費SP</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
-                                <span>SSR card 4</span>
-                                <form>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s3_l">
-                                        <label class="mdl-textfield__label" for="s3_l">上限</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s3_sp">
-                                        <label class="mdl-textfield__label" for="s3_sp">消費SP</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
-                                <span>SSR card 5</span>
-                                <form>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s4_l">
-                                        <label class="mdl-textfield__label" for="s4_l">上限</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s4_sp">
-                                        <label class="mdl-textfield__label" for="s4_sp">消費SP</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
-                            <div class="mdl-cell mdl-cell--12-col">
-                                <div>
-                                    <span class="mdl-chip">
-                                        <span class="mdl-chip__text">Passive Skill要求</span>
-                                    </span>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]{3,5}" id="vi_limit_origin" value="500" />
+                                    <label class="mdl-textfield__label" for="vi_limit_origin">特化上限</label>
+                                    <span class="mdl-textfield__error">Number, at least 500.</span>
                                 </div>
-                                <form>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="preserve_sp">
-                                        <label class="mdl-textfield__label" for="preserve_sp">要求SP</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="preserve_vi">
-                                        <label class="mdl-textfield__label" for="preserve_vi">要求特化pt</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="preserve_me">
-                                        <label class="mdl-textfield__label" for="preserve_me">要求集中pt</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="preserve_te">
-                                        <label class="mdl-textfield__label" for="preserve_te">要求団結pt</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
-                            <div class="mdl-cell mdl-cell--12-col ">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="calculate">計算</button>
-                            </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,100}" id="sp_origin" />
+                                    <label class="mdl-textfield__label" for="sp_origin">SP</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,3}" id="vi_up_origin" />
+                                    <label class="mdl-textfield__label" for="vi_up_origin">特化成長回數</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="[0-9]{0,3}" id="vi_l_origin" />
+                                    <label class="mdl-textfield__label" for="vi_l_origin">上限成長回數</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
                         </div>
-                        <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <div>
+                                <span class="mdl-chip">
+                                    <span class="mdl-chip__text">Ability繼承狀況</span>
+                                </span>
+                            </div>
+                            <div>※ 若已習得，則不用選取。</div>
+                        </div>
+                        <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="vi_p">
+                                <input type="checkbox" id="vi_p" class="mdl-checkbox__input" />
+                                <span class="mdl-checkbox__label">上限+</span>
+                            </label>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="vi_pp">
+                                <input type="checkbox" id="vi_pp" class="mdl-checkbox__input" />
+                                <span class="mdl-checkbox__label">上限++</span>
+                            </label>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="vi_ppp">
+                                <input type="checkbox" id="vi_ppp" class="mdl-checkbox__input" />
+                                <span class="mdl-checkbox__label">上限+++</span>
+                            </label>
+                        </div>
+                        <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <div>
+                                <span class="mdl-chip">
+                                    <span class="mdl-chip__text">技能狀況</span>
+                                </span>
+                            </div>
+                            <div>※ 填入可增加上限與所需SP。</div>
+                        </div>
+                        <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+                            <span>P card</span>
+                            <form>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="p_l" />
+                                    <label class="mdl-textfield__label" for="p_l">上限</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="p_sp" />
+                                    <label class="mdl-textfield__label" for="p_sp">消費SP</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+                            <span>SSR card 1</span>
+                            <form>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s0_l" />
+                                    <label class="mdl-textfield__label" for="s0_l">上限</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s0_sp" />
+                                    <label class="mdl-textfield__label" for="s0_sp">消費SP</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+                            <span>SSR card 2</span>
+                            <form>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s1_l" />
+                                    <label class="mdl-textfield__label" for="s1_l">上限</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s1_sp" />
+                                    <label class="mdl-textfield__label" for="s1_sp">消費SP</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+                            <span>SSR card 3</span>
+                            <form>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s2_l" />
+                                    <label class="mdl-textfield__label" for="s2_l">上限</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s2_sp" />
+                                    <label class="mdl-textfield__label" for="s2_sp">消費SP</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+                            <span>SSR card 4</span>
+                            <form>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s3_l" />
+                                    <label class="mdl-textfield__label" for="s3_l">上限</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s3_sp" />
+                                    <label class="mdl-textfield__label" for="s3_sp">消費SP</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+                            <span>SSR card 5</span>
+                            <form>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s4_l" />
+                                    <label class="mdl-textfield__label" for="s4_l">上限</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="s4_sp" />
+                                    <label class="mdl-textfield__label" for="s4_sp">消費SP</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <div>
+                                <span class="mdl-chip">
+                                    <span class="mdl-chip__text">Passive Skill要求</span>
+                                </span>
+                            </div>
+                            <form>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="preserve_sp" />
+                                    <label class="mdl-textfield__label" for="preserve_sp">要求SP</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="preserve_vi" />
+                                    <label class="mdl-textfield__label" for="preserve_vi">要求特化pt</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="preserve_me" />
+                                    <label class="mdl-textfield__label" for="preserve_me">要求集中pt</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="preserve_te" />
+                                    <label class="mdl-textfield__label" for="preserve_te">要求団結pt</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="mdl-cell mdl-cell--6-col">space</div> -->
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="calculate">計算</button>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col">
                             <table class="mdl-data-table mdl-js-data-table">
                                 <thead>
                                     <tr>
                                         <th class="mdl-data-table__cell--non-numeric">特化ステ</th>
-                                        <th  id='vi'></th>
+                                        <th id="vi"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">成長回數</td>
-                                        <td id='vi_up'></td>
+                                        <td id="vi_up"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">上限成長回數</td>
-                                        <td id='vi_l_up'></td>
+                                        <td id="vi_l_up"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">団結->SP回數</td>
-                                        <td id='te2sp'></td>
+                                        <td id="te2sp"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">集中->SP回數</td>
-                                        <td id='all2sp'></td>
+                                        <td id="all2sp"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">是否學習上限+</td>
-                                        <td id='learn_vi_p'></td>
+                                        <td id="learn_vi_p"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">是否學習上限++</td>
-                                        <td id='learn_vi_pp'></td>
+                                        <td id="learn_vi_pp"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">是否學習上限+++</td>
-                                        <td id='learn_vi_ppp'></td>
+                                        <td id="learn_vi_ppp"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">是否學習PSSR上限</td>
-                                        <td id='learn_p_skill'></td>
+                                        <td id="learn_p_skill"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">是否學習SSR 1上限</td>
-                                        <td id='learn_s0_skill'></td>
+                                        <td id="learn_s0_skill"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">是否學習SSR 2上限</td>
-                                        <td id='learn_s1_skill'></td>
+                                        <td id="learn_s1_skill"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">是否學習SSR 3上限</td>
-                                        <td id='learn_s2_skill'></td>
+                                        <td id="learn_s2_skill"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">是否學習SSR 4上限</td>
-                                        <td id='learn_s3_skill'></td>
+                                        <td id="learn_s3_skill"></td>
                                     </tr>
                                     <tr>
                                         <td class="mdl-data-table__cell--non-numeric">是否學習SSR 5上限</td>
-                                        <td id='learn_s4_skill'></td>
+                                        <td id="learn_s4_skill"></td>
                                     </tr>
-
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </main>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">Title</div>
+                <ul class="mdl-mini-footer__link-list">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
