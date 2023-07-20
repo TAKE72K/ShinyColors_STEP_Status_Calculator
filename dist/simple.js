@@ -8,7 +8,18 @@ let lp={name:"LP",objective:{direction:glpk.GLP_MAX,name:"obj",vars:[{name:"vi",
 
 function setLP(n,id){
 	let v=document.getElementById(n).value;
-	if(v>0){
+	if(n=='vi_p' | n=='vi_pp' | n=='vi_ppp'){
+		let check=document.getElementById(n).checked;
+		if (check){
+			lp.bounds[id].ub=1;
+			lp.bounds[id].lb=1;
+		}else{
+			lp.bounds[id].ub=0;
+			lp.bounds[id].lb=0;
+		}
+
+	}
+	else if(v>0){
 		lp.bounds[id].ub=v;
 		lp.bounds[id].lb=v;
 	}else{
