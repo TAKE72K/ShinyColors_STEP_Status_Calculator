@@ -5,8 +5,15 @@
 學完該學的アビリティ之後，輸入特化點數及養成卡的上限panel狀況，按頁面底部計算。
 
 計算機會算出特化最大值與需要的成長回數。
-![](./img/example1.jpg)
-
+### step by step
+1. 輸入pt
+> ![](./img/example1.jpg)
+2. 輸入繼承及上限パネル狀況
+> ![](./img/example2.jpg)
+3. 輸入パッシブ所需pt
+> ![](./img/example3.jpg)
+4. 計算結果
+> ![](./img/answer.jpg)
 ## 計算方法
 
 <details>
@@ -19,5 +26,6 @@
   
 </details>
 
-[Solver](https://github.com/jvail/glpk.js/tree/master)
-[Theme](https://github.com/google/material-design-lite)
+[Used Solver](https://github.com/jvail/glpk.js/tree/master)
+
+[Site Theme](https://github.com/google/material-design-lite)
