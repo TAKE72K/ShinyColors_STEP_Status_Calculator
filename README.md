@@ -29,3 +29,5 @@
 [Used Solver](https://github.com/jvail/glpk.js/tree/master)
 
 [Site Theme](https://github.com/google/material-design-lite)
+
+[LP statement](https://www.jstor.org/stable/pdf/1905292.pdf)
