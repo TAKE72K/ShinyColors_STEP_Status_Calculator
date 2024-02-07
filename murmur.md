@@ -19,7 +19,7 @@ In SEICHYOU panel, you can click Vi up buttom for at most 230 times, and the cos
 
 $$ViPtCost(ViUp) = \left\{
 \begin{array}{l}
-   10*ViUp, 0\leq ViUp \leq 30 \\
+   10 * ViUp, 0\leq ViUp \leq 30 \\
    300+15*(ViUp-30), 30\leq ViUp \leq 60 \\
    750+15*(ViUp-60), 60\leq ViUp \leq 90 \\
    1350+15*(ViUp-90), 90\leq ViUp \leq 120 \\
